@@ -10,3 +10,7 @@ beginning stages. first step is local control of my 3D printer.
 python -m venv venv
 venv\Scripts\activate # or venv\bin\activate for linux/mac
 ```
+- install the required dependencies in requirements.txt
+```bash
+pip install -r requirements.txt
+```
