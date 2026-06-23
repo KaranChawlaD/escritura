@@ -2,7 +2,7 @@
 converting a 3D printer into a handwriter
 
 ## project status
-beginning stages. first step is local control of my 3D printer.
+beginning stages. achieved local control of my 3D printer. next step is drawing hardware.
 
 ## setup
 - utilizes a virtual environment to prevent any dependency failures.
@@ -14,7 +14,7 @@ venv\Scripts\activate # or venv\bin\activate for linux/mac
 ```bash
 pip install -r requirements.txt
 ```
-- figure out your printer's SERIAL_PORT. On a Windows Laptop, this requires tethering to the printer with a data transferrable cable and looking for the serial port in Device Manager -> Ports (ex. "COMX"). Add this in a ".env" file:
+- figure out your printer's SERIAL_PORT. on a Windows Laptop, this requires tethering to the printer with a data transferrable cable and looking for the serial port in Device Manager -> Ports (ex. "COMX"). add this in a ".env" file:
 ```bash
 SERIAL_PORT="COMX"
 ```
