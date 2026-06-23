@@ -14,3 +14,7 @@ venv\Scripts\activate # or venv\bin\activate for linux/mac
 ```bash
 pip install -r requirements.txt
 ```
+- figure out your printer's SERIAL_PORT. On a Windows Laptop, this requires tethering to the printer with a data transferrable cable and looking for the serial port in Device Manager -> Ports (ex. "COMX"). Add this in a ".env" file:
+```bash
+SERIAL_PORT="COMX"
+```
