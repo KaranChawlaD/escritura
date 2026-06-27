@@ -1,9 +1,20 @@
 import cv2
+from skimage.morphology import skeletonize
+import numpy as np
 
 img = cv2.imread("lebron.png", cv2.IMREAD_GRAYSCALE)
 
+if img is None:
+    raise ValueError("could not load image at path")
+
+_, binary = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
+
+bool_img = binary > 0
+
+skeleton = skeletonize(bool_img)
+
 cv2.namedWindow('cv2 output', cv2.WINDOW_NORMAL)
 
-cv2.imshow('cv2 output', img)
+cv2.imshow('cv2 output', (skeleton * 255).astype(np.uint8))
 
 cv2.waitKey(0)
