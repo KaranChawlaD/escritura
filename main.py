@@ -35,6 +35,15 @@ if __name__ == "__main__":
 
         send_gcode_cmd(printer, "G28") #autohome
 
+        # basic square
+        send_gcode_cmd(printer, "G0 X50")
+        send_gcode_cmd(printer, "G0 Z0")
+        send_gcode_cmd(printer, "G0 Y175")
+        send_gcode_cmd(printer, "G0 X100")
+        send_gcode_cmd(printer, "G0 Y125")
+        send_gcode_cmd(printer, "G0 X50")
+        send_gcode_cmd(printer, "G0 Z10")
+
     except serial.SerialException as e:
         print(f"error: could not connect to printer: {e}")
     except KeyboardInterrupt:
