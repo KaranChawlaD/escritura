@@ -5,6 +5,36 @@ converting a 3D printer into a handwriter
 beginning stages. achieved local control of my 3D printer. hardware v1 is setup and working.
 improvements of the hardware and software will now come along simultaneously.
 
+## how it works
+### 1) image analysis
+first, an image is taken and converted to grayscale. it is then binarized based on intensity to clearly distinct foreground from background. finally, a skeletonization process is applied to strip line thickness in an image.
+
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; text-align: center;">
+  <figure style="margin: 0;">
+    <img style="width: 200px" src="./test_images/lebron.png" alt="Original LeBron">
+    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">Original Image</figcaption>
+  </figure>
+  
+  <figure style="margin: 0;">
+    <img style="width: 200px" src="./output_images/lebron.png" alt="Output LeBron">
+    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">Output Image</figcaption>
+  </figure>
+</div>
+
+<br><br>
+
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; text-align: center;">
+  <figure style="margin: 0;">
+    <img style="width: 200px" src="./test_images/circle.png" alt="Original LeBron">
+    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">Original Image</figcaption>
+  </figure>
+  
+  <figure style="margin: 0;">
+    <img style="width: 200px" src="./output_images/circle.png" alt="Output LeBron">
+    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">Output Image</figcaption>
+  </figure>
+</div>
+
 ## setup
 - utilizes a virtual environment to prevent any dependency failures.
 ```bash

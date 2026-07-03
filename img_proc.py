@@ -2,7 +2,7 @@ import cv2
 from skimage.morphology import skeletonize
 import numpy as np
 
-path = "circle.png"
+path = "lebron.png"
 
 img = cv2.imread(f"./test_images/{path}", cv2.IMREAD_GRAYSCALE)
 
