@@ -1,7 +1,13 @@
 from openai import OpenAI
 import base64
+import os
+from dotenv import load_dotenv
 
-client = OpenAI(api_key="YOUR_API_KEY")
+load_dotenv()
+
+KEY = os.getenv("OPENAI_KEY")
+
+client = OpenAI(api_key=KEY)
 
 result = client.images.edit(
     model="gpt-image-1",
