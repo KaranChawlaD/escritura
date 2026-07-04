@@ -35,9 +35,10 @@ venv\Scripts\activate # or venv\bin\activate for linux/mac
 ```bash
 pip install -r requirements.txt
 ```
-- figure out your printer's SERIAL_PORT. on a Windows Laptop, this requires tethering to the printer with a data transferrable cable and looking for the serial port in Device Manager -> Ports (ex. "COMX"). add this in a ".env" file:
+- figure out your printer's SERIAL_PORT. on a Windows Laptop, this requires tethering to the printer with a data transferrable cable and looking for the serial port in Device Manager -> Ports (ex. "COMX"). add this in a ".env" file with your OpenAI API key:
 ```bash
 SERIAL_PORT="COMX"
+OPENAI_KEY=""
 ```
 
 ## resources
