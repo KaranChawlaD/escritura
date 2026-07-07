@@ -11,7 +11,7 @@ client = OpenAI(api_key=KEY)
 
 result = client.images.edit(
     model="gpt-image-1",
-    image=open("input_image.png", "rb"),
+    image=open("./test_images/stock.png", "rb"),
     prompt="Create a line art of this face. Use minimal lines, with the same opacity and thickness. Imagine as if the drawing was done by a sharpie.",
 )
 
