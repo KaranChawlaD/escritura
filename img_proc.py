@@ -2,7 +2,7 @@ import cv2
 from skimage.morphology import skeletonize
 import numpy as np
 
-path = "stock_drawing.png"
+path = "stock_drawing2.png"
 
 img = cv2.imread(f"./test_images/{path}", cv2.IMREAD_GRAYSCALE)
 
