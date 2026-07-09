@@ -1,8 +1,9 @@
 import cv2
 from skimage.morphology import skeletonize
 import numpy as np
+from skan import Skeleton, summarize
 
-path = "stock_drawing2.png"
+path = "circle.png"
 
 img = cv2.imread(f"./test_images/{path}", cv2.IMREAD_GRAYSCALE)
 
@@ -22,3 +23,9 @@ cv2.imshow('cv2 output', (skeleton * 255).astype(np.uint8))
 cv2.imwrite(f"./output_images/{path}", (skeleton * 255).astype(np.uint8))
 
 cv2.waitKey(0)
+
+# analysis
+skeleton_obj = Skeleton(skeleton)
+summary = summarize(skeleton_obj, separator='-')
+
+print(summary)
